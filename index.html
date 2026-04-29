@@ -85,8 +85,22 @@
     /* nav */
     nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 5%; height:70px; background:rgba(11,31,58,.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); transition:box-shadow .3s; }
     nav.scrolled { box-shadow:0 4px 24px rgba(0,0,0,.3); }
-    .logo { font-family:'DM Serif Display',serif; font-size:1.35rem; color:var(--white); letter-spacing:.01em; text-decoration:none; }
-    .logo span { color:var(--gold); }
+    .logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+    .logo-wordmark { display:flex; flex-direction:column; gap:0; line-height:1; }
+    .logo-name { font-family:'DM Serif Display',serif; font-size:1.2rem; font-weight:700; color:var(--white); letter-spacing:-0.02em; }
+    .logo-name span { color:var(--gold); }
+    .logo-sub { font-family:'DM Serif Display',serif; font-size:1.0rem; font-weight:400; font-style:italic; color:rgba(255,255,255,0.45); letter-spacing:0.02em; margin-top:1px; }
+    @keyframes logo-spin-outer { from{stroke-dashoffset:0} to{stroke-dashoffset:-502} }
+    @keyframes logo-spin-inner { from{stroke-dashoffset:251} to{stroke-dashoffset:-251} }
+    @keyframes logo-orbit { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes logo-orbit-rev { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+    @media(prefers-reduced-motion:no-preference){
+      .logo-ring-outer { animation:logo-spin-outer 6s linear infinite; }
+      .logo-ring-outer-gold { animation:logo-spin-outer 6s linear infinite; animation-delay:-2s; }
+      .logo-ring-inner { animation:logo-spin-inner 4s linear infinite reverse; }
+      .logo-orbit-g { animation:logo-orbit 6s linear infinite; transform-origin:24px 24px; }
+      .logo-orbit-rev-g { animation:logo-orbit-rev 4s linear infinite; transform-origin:24px 24px; }
+    }
     .nav-links { display:flex; gap:2.5rem; list-style:none; }
     .nav-links a { color:rgba(255,255,255,.75); text-decoration:none; font-size:.88rem; font-weight:500; letter-spacing:.04em; text-transform:uppercase; transition:color .2s; position:relative; }
     .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--accent-light); transform:scaleX(0); transition:transform .2s; }
@@ -344,7 +358,26 @@
 
 <!-- Nav -->
 <nav role="navigation" aria-label="Main navigation">
-  <a href="#hero" class="logo" aria-label="Dynamiq Advisors home">Dynamiq<span>.</span></a>
+  <a href="#hero" class="logo" aria-label="Dynamiq Advisors home">
+    <svg width="36" height="36" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle class="logo-ring-outer" cx="24" cy="24" r="20" fill="none" stroke="#2A7DE1" stroke-width="2.5" stroke-dasharray="46 80" stroke-linecap="round"/>
+      <circle class="logo-ring-outer-gold" cx="24" cy="24" r="20" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-dasharray="16 110" stroke-dashoffset="60" stroke-linecap="round"/>
+      <circle class="logo-ring-inner" cx="24" cy="24" r="13" fill="none" stroke="#4A9AF5" stroke-width="2" stroke-dasharray="26 55" stroke-linecap="round"/>
+      <g class="logo-orbit-g">
+        <circle cx="24" cy="4" r="2.5" fill="#2A7DE1"/>
+        <circle cx="24" cy="44" r="1.8" fill="#C9A84C"/>
+      </g>
+      <g class="logo-orbit-rev-g">
+        <circle cx="24" cy="11" r="2" fill="#4A9AF5" opacity="0.85"/>
+      </g>
+      <circle cx="24" cy="24" r="8" fill="#0B1F3A"/>
+      <text x="24" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" font-style="italic" fill="#FFFFFF">D</text>
+    </svg>
+    <div class="logo-wordmark">
+      <div class="logo-name">Dynamiq<span>.</span></div>
+      <div class="logo-sub">Advisors</div>
+    </div>
+  </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -1003,7 +1036,17 @@
 <button id="back-top" aria-label="Back to top" title="Back to top">↑</button>
 
 <footer role="contentinfo">
-  <div class="footer-logo">Dynamiq<span>.</span> Advisors Ltd</div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <svg width="28" height="28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle class="logo-ring-outer" cx="24" cy="24" r="20" fill="none" stroke="#2A7DE1" stroke-width="2.5" stroke-dasharray="46 80" stroke-linecap="round" opacity="0.7"/>
+      <circle class="logo-ring-outer-gold" cx="24" cy="24" r="20" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-dasharray="16 110" stroke-dashoffset="60" stroke-linecap="round" opacity="0.7"/>
+      <circle class="logo-ring-inner" cx="24" cy="24" r="13" fill="none" stroke="#4A9AF5" stroke-width="2" stroke-dasharray="26 55" stroke-linecap="round" opacity="0.6"/>
+      <g class="logo-orbit-g"><circle cx="24" cy="4" r="2.5" fill="#2A7DE1" opacity="0.7"/></g>
+      <circle cx="24" cy="24" r="8" fill="#081829"/>
+      <text x="24" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" font-style="italic" fill="rgba(255,255,255,0.6)">D</text>
+    </svg>
+    <div class="footer-logo">Dynamiq<span>.</span> <em style="font-style:italic;font-weight:400;color:rgba(255,255,255,0.4);">Advisors Ltd</em></div>
+  </div>
   <p>© <span id="copy-year"></span> Dynamiq Advisors Ltd. All rights reserved.</p>
   <ul class="footer-links">
     <li><a href="#about">About</a></li>
