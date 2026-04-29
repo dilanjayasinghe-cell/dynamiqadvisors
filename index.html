@@ -585,6 +585,20 @@
       </div>
     </article>
 
+    <article class="blog-card fade-in" onclick="openArticle('wave2-finops')" role="button" tabindex="0" aria-label="Read: What's New in Dynamics 365 Finance and Operations and Project Operations — 2025 Release Wave 2">
+      <div class="blog-card-header">
+        <span class="blog-tag">Platform Updates</span>
+        <h3>What's New in D365 Finance &amp; Operations and Project Operations — 2025 Release Wave 2</h3>
+      </div>
+      <div class="blog-card-body">
+        <p>A new journal framework, agentic AI, redesigned project approvals, and major analytics enhancements. Everything that matters in Microsoft's biggest release wave of the year.</p>
+        <div class="blog-meta">
+          <span class="blog-date">April 2026</span>
+          <span class="blog-read">Read article →</span>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -717,6 +731,271 @@
   <h3>The broader picture</h3>
   <p>The Finance Copilot GA is one part of a broader shift in how Microsoft is positioning Dynamics 365 for the finance function. Alongside it, Microsoft's 2025 release wave 2 for D365 Finance introduced AI-driven workflow management in Business Performance Planning and generative help within Business Performance Analytics — creating a layered AI experience from transactional processing through to strategic planning.</p>
   <p>For organisations evaluating their ERP strategy, the question is no longer whether AI will feature in the finance function — it already does. The question is how to structure your Dynamics 365 deployment to take full advantage of these capabilities now and in the waves that follow.</p>
+</template>
+<template id="art-wave2-finops">
+  <span class="article-tag">Platform Updates</span>
+  <h2 id="modal-title-text">What's New in D365 Finance &amp; Operations and Project Operations — 2025 Release Wave 2</h2>
+  <div class="article-meta">By Dynamiq Advisors &middot; April 2026 &middot; 8 min read</div>
+
+  <style>
+    .aw-hero { background:linear-gradient(135deg,#0B1F3A 0%,#122848 60%,#1A3A60 100%); border-radius:10px; padding:1.75rem; margin-bottom:1.75rem; border:0.5px solid rgba(42,125,225,0.3); position:relative; overflow:hidden; }
+    .aw-hero::before { content:''; position:absolute; top:-50px; right:-50px; width:180px; height:180px; border-radius:50%; background:rgba(42,125,225,0.1); }
+    .aw-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.6rem; }
+    .aw-hero h3 { font-family:'DM Serif Display',serif; font-size:1.3rem; color:#fff; line-height:1.3; margin-bottom:0.6rem; position:relative; }
+    .aw-hero p { font-size:0.88rem; color:rgba(255,255,255,0.65); line-height:1.7; position:relative; }
+    .aw-stats { display:flex; gap:2rem; margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; position:relative; }
+    .aw-stat-n { font-size:1.35rem; font-weight:600; color:#4A9AF5; }
+    .aw-stat-l { font-size:10px; text-transform:uppercase; letter-spacing:0.06em; color:rgba(255,255,255,0.4); margin-top:2px; }
+
+    .aw-tl { margin:1.5rem 0; }
+    .aw-tl-track { display:flex; }
+    .aw-tl-item { flex:1; padding:0.85rem 0.6rem; border-top:3px solid rgba(255,255,255,0.1); position:relative; }
+    .aw-tl-item::before { content:''; position:absolute; top:-7px; left:0; width:11px; height:11px; border-radius:50%; background:var(--navy,#0B1F3A); border:2px solid rgba(255,255,255,0.2); }
+    .aw-tl-item.done { border-top-color:#1D9E75; }
+    .aw-tl-item.done::before { border-color:#1D9E75; background:#1D9E75; }
+    .aw-tl-item.active { border-top-color:#2A7DE1; }
+    .aw-tl-item.active::before { border-color:#2A7DE1; background:#2A7DE1; }
+    .aw-tl-month { font-size:11px; font-weight:600; color:var(--color-text-primary); margin-bottom:3px; }
+    .aw-tl-badge { display:inline-block; font-size:10px; font-weight:600; padding:2px 5px; border-radius:3px; margin-bottom:4px; }
+    .aw-tl-badge.ga      { background:rgba(29,158,117,0.15); color:#0F6E56; }
+    .aw-tl-badge.preview { background:rgba(42,125,225,0.15); color:#185FA5; }
+    .aw-tl-badge.planned { background:rgba(136,135,128,0.15); color:#5F5E5A; }
+    .aw-tl-feat { font-size:11px; color:var(--color-text-secondary); line-height:1.5; }
+
+    .aw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:1.25rem 0; }
+    .aw-card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:10px; padding:1rem; position:relative; overflow:hidden; cursor:pointer; transition:border-color 0.2s; }
+    .aw-card:hover { border-color:var(--color-border-secondary); }
+    .aw-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; border-radius:10px 10px 0 0; }
+    .aw-card.blue::before   { background:#2A7DE1; }
+    .aw-card.teal::before   { background:#1D9E75; }
+    .aw-card.amber::before  { background:#BA7517; }
+    .aw-card.purple::before { background:#534AB7; }
+    .aw-card.coral::before  { background:#D85A30; }
+    .aw-icon { font-size:16px; margin-bottom:0.6rem; }
+    .aw-card-title { font-size:12px; font-weight:600; color:var(--color-text-primary); margin-bottom:0.35rem; line-height:1.3; }
+    .aw-card-desc  { font-size:11px; color:var(--color-text-secondary); line-height:1.6; }
+    .aw-badge { display:inline-block; font-size:10px; font-weight:600; padding:2px 5px; border-radius:3px; margin-top:0.5rem; }
+    .aw-badge.ga      { background:rgba(29,158,117,0.15); color:#0F6E56; }
+    .aw-badge.preview { background:rgba(42,125,225,0.15); color:#185FA5; }
+    .aw-badge.new     { background:rgba(201,168,76,0.15); color:#854F0B; }
+
+    .aw-bars { margin:1.25rem 0; }
+    .aw-bar-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+    .aw-bar-label { font-size:11px; color:var(--color-text-secondary); min-width:150px; text-align:right; }
+    .aw-bar-bg { flex:1; height:9px; background:var(--color-background-secondary); border-radius:5px; overflow:hidden; }
+    .aw-bar-fill { height:100%; border-radius:5px; }
+    .aw-bar-txt { font-size:11px; font-weight:600; color:var(--color-text-primary); min-width:38px; }
+
+    .aw-po-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin:1.25rem 0; }
+    .aw-po { background:var(--color-background-secondary); border-radius:8px; padding:0.9rem 1rem; border-left:3px solid transparent; }
+    .aw-po.blue   { border-left-color:#2A7DE1; }
+    .aw-po.teal   { border-left-color:#1D9E75; }
+    .aw-po.amber  { border-left-color:#BA7517; }
+    .aw-po.purple { border-left-color:#534AB7; }
+    .aw-po-n { font-size:15px; font-weight:600; color:var(--color-text-primary); margin-bottom:3px; }
+    .aw-po-l { font-size:11px; color:var(--color-text-secondary); line-height:1.5; }
+
+    .aw-callout { background:rgba(42,125,225,0.07); border:0.5px solid rgba(42,125,225,0.2); border-left:3px solid #2A7DE1; border-radius:0 8px 8px 0; padding:1rem 1.1rem; margin:1.5rem 0; }
+    .aw-callout p { font-size:0.88rem; color:var(--color-text-secondary); line-height:1.7; margin:0; }
+    .aw-callout strong { color:var(--color-text-primary); }
+
+    .aw-cta { background:linear-gradient(135deg,#0B1F3A,#122848); border-radius:8px; padding:1.25rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; border:0.5px solid rgba(42,125,225,0.25); margin-top:1.75rem; }
+    .aw-cta p { font-size:12px; color:rgba(255,255,255,0.7); line-height:1.6; margin:0; }
+    .aw-cta a { background:#2A7DE1; color:#fff; text-decoration:none; padding:0.55rem 1.2rem; border-radius:4px; font-size:12px; font-weight:600; white-space:nowrap; flex-shrink:0; }
+
+    @media(max-width:500px){ .aw-tl-track{flex-direction:column;} .aw-bar-label{min-width:90px;font-size:10px;} }
+  </style>
+
+  <!-- Hero -->
+  <div class="aw-hero">
+    <div class="aw-eyebrow">Platform Update &middot; Release Wave 2 &middot; Oct 2025 &ndash; Mar 2026</div>
+    <h3>Finance &amp; Operations and Project Operations — the biggest release wave of the year</h3>
+    <p>Microsoft's 2025 Release Wave 2 delivers agentic AI, a new journal framework, redesigned project approvals, and significant analytics enhancements across the D365 platform.</p>
+    <div class="aw-stats">
+      <div><div class="aw-stat-n">100+</div><div class="aw-stat-l">New features</div></div>
+      <div><div class="aw-stat-n">6 months</div><div class="aw-stat-l">Oct 2025 &ndash; Mar 2026</div></div>
+      <div><div class="aw-stat-n">8 min</div><div class="aw-stat-l">Read time</div></div>
+    </div>
+  </div>
+
+  <p>Microsoft's 2025 Release Wave 2 — covering October 2025 through March 2026 — delivers one of the most substantial sets of updates to Dynamics 365 Finance in some time, with investment focused on global-scale finance and agentic operations, deepening multi-entity capabilities, and accelerating period-end close. Alongside Finance, Project Operations delivers functionally rich improvements across the full project lifecycle, from mobile expense management to investment project support.</p>
+
+  <!-- Timeline -->
+  <h3>Release schedule</h3>
+  <div class="aw-tl">
+    <div class="aw-tl-track">
+      <div class="aw-tl-item done">
+        <div class="aw-tl-month">Oct 2025</div>
+        <span class="aw-tl-badge ga">GA</span>
+        <div class="aw-tl-feat">New journal framework &middot; Copilot Finance GA &middot; Fixed asset split</div>
+      </div>
+      <div class="aw-tl-item done">
+        <div class="aw-tl-month">Nov 2025</div>
+        <span class="aw-tl-badge ga">GA</span>
+        <div class="aw-tl-feat">Redesigned approvals UI &middot; Multi-receipt upload &middot; Supplier portal</div>
+      </div>
+      <div class="aw-tl-item done">
+        <div class="aw-tl-month">Dec 2025</div>
+        <span class="aw-tl-badge preview">Preview</span>
+        <div class="aw-tl-feat">Analytics MCP server &middot; Investment project support &middot; Wrist scanner</div>
+      </div>
+      <div class="aw-tl-item active">
+        <div class="aw-tl-month">Jan&ndash;Mar 2026</div>
+        <span class="aw-tl-badge planned">Planned</span>
+        <div class="aw-tl-feat">BPA deeper integration &middot; Demand planning AI &middot; Purchase orders from item req.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Finance -->
+  <h3>Dynamics 365 Finance — what's new</h3>
+
+  <p>The headline change for day-to-day finance users is the new journal framework. A unified setup page now centralises posting account configuration, with versioning and traceability ensuring every transaction links to the correct posting rule. Critically, payments can now post even if a settlement error occurs — preventing workflow interruptions and allowing failed settlements to be corrected independently. This directly addresses longstanding pain points around large journal operations, multicompany journal support, and poor error visibility at the voucher level.</p>
+
+  <div class="aw-grid">
+    <div class="aw-card blue">
+      <div class="aw-icon">📋</div>
+      <div class="aw-card-title">New journal framework</div>
+      <div class="aw-card-desc">Centralised posting setup, versioning, traceability. Delayed settlement prevents workflow blocks.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+    <div class="aw-card teal">
+      <div class="aw-icon">📈</div>
+      <div class="aw-card-title">BPA &amp; Planning integration</div>
+      <div class="aw-card-desc">Tighter connection between Business Performance Planning and Analytics. Live data, AI-assisted modelling.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+    <div class="aw-card amber">
+      <div class="aw-icon">🏗️</div>
+      <div class="aw-card-title">Fixed asset enhancements</div>
+      <div class="aw-card-desc">Split assets by amount or percentage. Automated intercompany transfers with full audit trail.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+    <div class="aw-card purple">
+      <div class="aw-icon">🤖</div>
+      <div class="aw-card-title">Copilot Finance (M365)</div>
+      <div class="aw-card-desc">Natural-language variance analysis, reconciliation assist, and workflow approvals in Excel and Outlook.</div>
+      <span class="aw-badge new">Now GA</span>
+    </div>
+    <div class="aw-card coral">
+      <div class="aw-icon">🌍</div>
+      <div class="aw-card-title">Globalization Studio</div>
+      <div class="aw-card-desc">Expanded localisation across 210+ countries. Continuous regulatory updates and compliance frameworks.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+  </div>
+
+  <p>The Business Performance Analytics and Planning integration also sees significant improvement — tighter data sharing between BPA, Business Performance Planning, and the wider Finance and Operations apps delivers faster, more reliable financial insights. Finance teams can now perform Group By and Filter operations directly before importing data into Dataverse. AI-assisted modelling streamlines model creation and resolves naming inconsistencies. On fixed assets, organisations can now split assets by amount or percentage, preview before posting, and automate intercompany transfers — the system creates destination assets, copies financial details, and posts acquisition and disposal entries automatically.</p>
+
+  <!-- Impact bars -->
+  <div class="aw-bars">
+    <div class="aw-bar-row">
+      <div class="aw-bar-label">Journal framework</div>
+      <div class="aw-bar-bg"><div class="aw-bar-fill" style="width:92%;background:#2A7DE1;"></div></div>
+      <div class="aw-bar-txt">High</div>
+    </div>
+    <div class="aw-bar-row">
+      <div class="aw-bar-label">Copilot Finance</div>
+      <div class="aw-bar-bg"><div class="aw-bar-fill" style="width:88%;background:#2A7DE1;"></div></div>
+      <div class="aw-bar-txt">High</div>
+    </div>
+    <div class="aw-bar-row">
+      <div class="aw-bar-label">BPA &amp; Planning</div>
+      <div class="aw-bar-bg"><div class="aw-bar-fill" style="width:78%;background:#4A9AF5;"></div></div>
+      <div class="aw-bar-txt">High</div>
+    </div>
+    <div class="aw-bar-row">
+      <div class="aw-bar-label">Fixed asset management</div>
+      <div class="aw-bar-bg"><div class="aw-bar-fill" style="width:62%;background:#4A9AF5;"></div></div>
+      <div class="aw-bar-txt">Medium</div>
+    </div>
+    <div class="aw-bar-row">
+      <div class="aw-bar-label">Demand planning AI</div>
+      <div class="aw-bar-bg"><div class="aw-bar-fill" style="width:75%;background:#1D9E75;"></div></div>
+      <div class="aw-bar-txt">High</div>
+    </div>
+    <div class="aw-bar-row">
+      <div class="aw-bar-label">Supplier Engagement</div>
+      <div class="aw-bar-bg"><div class="aw-bar-fill" style="width:68%;background:#1D9E75;"></div></div>
+      <div class="aw-bar-txt">Medium</div>
+    </div>
+  </div>
+
+  <!-- SCM -->
+  <h3>Supply Chain Management — key updates</h3>
+  <p>For Supply Chain Management, the headline additions are generative AI for demand planning, a new Supplier Engagement portal, and warehouse modernisation. The demand planning AI analyses historical sales and forecast data to automatically detect trends, seasonality, and ABC/XYZ classifications — grouping data into actionable clusters to help planners optimise inventory and reduce stockouts. The Supplier Engagement app centralises supplier relationship management across all legal entities, with a new portal supporting RFQs, purchase orders, and invoicing. On the warehouse side, a new Labour Management System integration framework enables real-time productivity tracking and automated scheduling, and the Warehouse Management mobile app now supports wrist-mounted scanners.</p>
+
+  <div class="aw-callout">
+    <p><strong>MCP and agentic AI:</strong> Underpinning several Wave 2 features is the new dynamic Dynamics 365 ERP MCP server, which exposes hundreds of thousands of ERP functions — including customisations — to AI agents without custom code. The companion Analytics MCP server entered public preview in December 2025, connecting ERP analytics directly to Copilot and Microsoft Teams. All new ERP agents are being built on MCP, with all existing agents migrating by the end of the wave.</p>
+  </div>
+
+  <!-- Project Ops -->
+  <h3>Dynamics 365 Project Operations — what's new</h3>
+  <p>Project Operations Wave 2 focuses on removing friction from the everyday tasks that consume project managers and their teams — approvals, expense submission, and procurement — while adding enterprise-grade capabilities for investment projects and multi-geography operations.</p>
+
+  <div class="aw-po-grid">
+    <div class="aw-po blue">
+      <div class="aw-po-n">Redesigned</div>
+      <div class="aw-po-l">Approvals UI with calendar grid and tabbed layout by approval type</div>
+    </div>
+    <div class="aw-po teal">
+      <div class="aw-po-n">Multi-receipt</div>
+      <div class="aw-po-l">Upload multiple receipts to a single expense entry in one action</div>
+    </div>
+    <div class="aw-po amber">
+      <div class="aw-po-n">Direct PO</div>
+      <div class="aw-po-l">Purchase orders from item requirements with cost recorded at receipt</div>
+    </div>
+    <div class="aw-po purple">
+      <div class="aw-po-n">Investment</div>
+      <div class="aw-po-l">Project support with automated WIP tracking and fixed asset capitalisation</div>
+    </div>
+  </div>
+
+  <div class="aw-grid">
+    <div class="aw-card blue">
+      <div class="aw-icon">✅</div>
+      <div class="aw-card-title">Redesigned approvals</div>
+      <div class="aw-card-desc">Calendar-style grid for time approvals. Tabbed layout with pending count indicators per approval type.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+    <div class="aw-card teal">
+      <div class="aw-icon">📱</div>
+      <div class="aw-card-title">Expense management (mobile)</div>
+      <div class="aw-card-desc">Upload multiple receipts at once. Split credit card transactions even when policy fields are incomplete.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+    <div class="aw-card amber">
+      <div class="aw-icon">📦</div>
+      <div class="aw-card-title">Purchase orders from item req.</div>
+      <div class="aw-card-desc">Automate project procurement with real-time cost at receipt and integrated three-way matching.</div>
+      <span class="aw-badge new">New feature</span>
+    </div>
+    <div class="aw-card purple">
+      <div class="aw-icon">💼</div>
+      <div class="aw-card-title">Investment project support</div>
+      <div class="aw-card-desc">Automated cost tracking for internal capital projects. WIP accounting with fixed asset elimination on completion.</div>
+      <span class="aw-badge new">New feature</span>
+    </div>
+    <div class="aw-card coral">
+      <div class="aw-icon">🌐</div>
+      <div class="aw-card-title">Time zone-agnostic dates</div>
+      <div class="aw-card-desc">Date fields fixed regardless of user or system time zone. Eliminates scheduling errors for global project teams.</div>
+      <span class="aw-badge ga">Generally available</span>
+    </div>
+  </div>
+
+  <p>The redesigned approvals experience introduces a calendar-style grid for time approvals — allowing project managers to review large volumes of data at a glance — alongside a tabbed layout that consolidates all approval types in one place with pending count indicators. For expense management, the ability to upload multiple receipts to a single entry and split credit card transactions even when policy fields are incomplete removes two of the most common day-to-day friction points. The investment project feature automates cost tracking for internal capital initiatives, recording all costs as work-in-progress and giving teams two options on project completion: eliminate the project or transfer costs to a fixed asset. Time zone-agnostic date fields — a smaller but impactful change — eliminate a class of scheduling and billing errors that particularly affect consulting organisations operating across multiple time zones.</p>
+
+  <!-- What this means -->
+  <h3>What this means for your organisation</h3>
+  <p>The 2025 Release Wave 2 continues Microsoft's pattern of deepening automation, improving usability, and embedding AI more deeply into everyday workflows across Finance and Project Operations. The journal framework changes and Business Performance Analytics enhancements are the most immediately impactful for finance teams looking to compress period-end close. For project-centric businesses, the approvals redesign and expense management improvements address friction points that affect every project manager, every day.</p>
+  <p>As always with release wave features, some require feature flag enablement or administrator configuration before they become active in your environment. If you would like a review of which Wave 2 features are enabled in your Dynamics 365 tenant and which require action, get in touch.</p>
+
+  <div class="aw-cta">
+    <p>Want to understand which Wave 2 features are enabled in your environment — and which require action from your team or partner?</p>
+    <a href="#contact">Talk to an advisor</a>
+  </div>
 </template>
 
 </main>
@@ -864,7 +1143,8 @@ const articleMap = {
   'mcp-dynamic':    'art-mcp-dynamic',
   'mcp-what-is':    'art-mcp-what-is',
   'agentic-erp':    'art-agentic-erp',
-  'copilot-finance':'art-copilot-finance'
+  'copilot-finance':'art-copilot-finance',
+  'wave2-finops':   'art-wave2-finops'
 };
 
 function openArticle(id) {
