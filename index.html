@@ -596,6 +596,129 @@
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════════
+     ARTICLE CONTENT — stored in <template> elements
+     so the browser never renders them but JS can read
+     the HTML safely without breaking the script block
+     ═══════════════════════════════════════════════ -->
+
+<template id="art-mcp-dynamic">
+  <span class="article-tag">MCP &amp; AI Agents</span>
+  <h2 id="modal-title-text">From Static to Dynamic — The Evolution of the Dynamics 365 MCP Server</h2>
+  <div class="article-meta">By Dynamiq Advisors &middot; November 2025 &middot; 6 min read</div>
+  <p>When Microsoft introduced the first Dynamics 365 ERP Model Context Protocol (MCP) server at Build 2025, it was a landmark moment — a standardised, governed bridge between AI agents and enterprise ERP data. But it came with a significant constraint: it was <strong>static</strong>. A fixed catalogue of 13 tools, no room for customisations or ISV extensions, and any change required a code deployment.</p>
+  <p>By November 2025, Microsoft had answered those limitations decisively. The new <strong>dynamic ERP MCP server</strong>, now available in public preview, replaces the fixed catalogue with a flexible framework that can expose hundreds of thousands of ERP functions — including your own customisations — without a single line of custom integration code.</p>
+  <h3>What changed and why it matters</h3>
+  <p>The original static server was a proof of concept. It demonstrated that AI agents could interact with Dynamics 365 Finance and Supply Chain Management in a governed, standardised way. What it could not do was scale to the full complexity of a real enterprise ERP environment, where organisations have years of customisations, ISV solutions, and industry-specific configurations layered on top of the standard product.</p>
+  <p>The dynamic server solves this by allowing agents to navigate ERP forms, populate fields, and execute available workflow actions — just as a human user would — but through a server API. The result is that virtually any function available through the Dynamics 365 user interface is now accessible to an AI agent.</p>
+  <div class="callout"><p>&#128161; <strong>What this means for your business:</strong> If you have a customised D365 Finance environment, your customisations are now agent-accessible without any additional development work. AI agents can operate within your business rules and data structures, not around them.</p></div>
+  <h3>The analytics MCP server</h3>
+  <p>Alongside the dynamic ERP server, Microsoft announced a companion <strong>analytics MCP server</strong> entering public preview in December 2025. This extends the same model-context approach to ERP reporting and analytics data held in Business Performance Analytics (BPA). Agents and BI tools gain governed access to measures, dimensions, and semantic models — meaning metrics like margin, revenue, and cash flow are defined once and shared consistently across AI agents, dashboards, and reports.</p>
+  <p>The practical implication is significant: natural-language forecasting and variance analysis directly within Microsoft Teams or Copilot, grounded in live ERP data rather than stale exports.</p>
+  <h3>Microsoft's strategic commitment</h3>
+  <p>This is not a peripheral feature. Microsoft has stated that all new Dynamics 365 ERP agents will be built on MCP, and all existing agents will migrate to the framework by December 2025. The Dataverse MCP server reached general availability at Ignite 2025, and MCP servers for Dynamics 365 Sales and Customer Service are also live — creating a coherent, cross-functional agentic platform across the entire Dynamics 365 estate.</p>
+  <h3>What should you be doing now?</h3>
+  <p>For organisations currently using or considering Dynamics 365 Finance or Supply Chain Management, the key steps are:</p>
+  <ul>
+    <li>Identify which business processes are candidates for AI agent automation — think repetitive, rules-based tasks such as supplier selection, purchase order approval, and exception handling</li>
+    <li>Evaluate whether your current D365 environment is on a supported version and cloud deployment to take advantage of MCP preview features</li>
+    <li>Begin scoping a pilot use case — a single, well-defined process — to validate the technology in your environment before broader rollout</li>
+    <li>Review your governance and change management approach for AI-initiated actions within your ERP</li>
+  </ul>
+  <p>The dynamic MCP server is in public preview today. Organisations that begin exploring it now will be significantly ahead when these capabilities reach general availability.</p>
+</template>
+
+<template id="art-mcp-what-is">
+  <span class="article-tag">Explainer</span>
+  <h2 id="modal-title-text">What is MCP and Why Should Dynamics 365 Customers Care?</h2>
+  <div class="article-meta">By Dynamiq Advisors &middot; October 2025 &middot; 5 min read</div>
+  <p>You may have started hearing the term "MCP" in conversations about AI and Microsoft Dynamics 365. It is being called the <strong>"USB-C for AI"</strong> — a universal connector that allows AI agents to plug into any compatible system. But what does it actually mean for organisations running Dynamics 365, and why should it be on your radar?</p>
+  <h3>What MCP stands for</h3>
+  <p><strong>Model Context Protocol</strong> is an open standard that defines how AI agents communicate with external tools, data sources, and applications. It was originally introduced by Anthropic — the AI company behind the Claude model — and has since been adopted as a cross-industry standard by Microsoft, among many others.</p>
+  <p>Before MCP, connecting an AI agent to a business system like an ERP required custom integration work for every new system — unique APIs, bespoke connectors, ongoing maintenance. MCP replaces that with a single, standardised interface. If a system has an MCP server, any MCP-compatible AI agent can connect to it out of the box.</p>
+  <div class="callout"><p>&#128161; <strong>The USB-C analogy:</strong> Just as USB-C replaced dozens of proprietary charging cables with one universal standard, MCP replaces dozens of proprietary AI integrations with one universal protocol. One connector, any device.</p></div>
+  <h3>How Microsoft has implemented MCP for Dynamics 365</h3>
+  <p>Microsoft has built MCP servers across its Dynamics 365 and Power Platform portfolio. As of late 2025, the following are live or in public preview:</p>
+  <ul>
+    <li><strong>Dynamics 365 ERP MCP Server</strong> (Finance &amp; Supply Chain Management) — dynamic framework exposing hundreds of thousands of ERP functions, in public preview</li>
+    <li><strong>Dynamics 365 Sales MCP Server</strong> — allows AI agents to retrieve, update, and act on CRM data, qualify leads, and generate quotes</li>
+    <li><strong>Dynamics 365 Customer Service MCP Server</strong> — connects agents to case management and service workflows</li>
+    <li><strong>Dataverse MCP Server</strong> — generally available; natural language interface to all data stored in Dataverse across the Power Platform</li>
+    <li><strong>Power Apps MCP Server</strong> — allows agents to trigger approvals, form submissions, and data retrieval within Power Apps</li>
+    <li><strong>Analytics MCP Server</strong> — entering public preview December 2025; governed access to Business Performance Analytics data</li>
+  </ul>
+  <h3>What it means for AI assistant tools</h3>
+  <p>One of the most significant practical implications of MCP for end users is that <strong>your AI assistant can now directly connect to Dynamics 365</strong>. Microsoft has confirmed that the Dynamics 365 Sales MCP server is compatible with Claude and, in the future, ChatGPT. A seller could ask their AI assistant to pull their top 10 open opportunities, draft a follow-up email for each, and log the activity in D365 — without leaving the AI tool.</p>
+  <p>For developers and IT teams, MCP dramatically reduces integration effort. Building an agent that spans Dynamics 365 Sales, Business Central, and Customer Service no longer requires three separate custom integrations — it requires three MCP server connections, all following the same pattern.</p>
+  <h3>What Dynamics 365 customers should know</h3>
+  <p>MCP is not just a technical detail — it is the architectural foundation of how Microsoft is building AI into Dynamics 365 going forward. For customers, this means:</p>
+  <ul>
+    <li>Simpler, faster agent development — whether you build custom agents in Copilot Studio or use Microsoft first-party agents</li>
+    <li>Cross-application automation without custom code — a quote in Business Central triggered by a qualified lead in D365 Sales, processed through a customer service workflow, all via MCP</li>
+    <li>Future-proof integrations — as the MCP ecosystem grows, new AI tools can connect to your Dynamics 365 environment without additional integration work</li>
+    <li>Consistent governance — every agent action goes through the same access controls and audit trails as a human user</li>
+  </ul>
+  <p>Understanding MCP now puts you in a strong position to evaluate the AI agent roadmap for your Dynamics 365 environment — and to ask the right questions of your implementation partner about how they are preparing for this shift.</p>
+</template>
+
+<template id="art-agentic-erp">
+  <span class="article-tag">Agentic AI</span>
+  <h2 id="modal-title-text">The Agentic ERP — What Autonomous AI Means for Finance Teams</h2>
+  <div class="article-meta">By Dynamiq Advisors &middot; September 2025 &middot; 7 min read</div>
+  <p>Microsoft's vision for Dynamics 365 has a name: the <strong>Frontier Firm</strong>. It describes an organisation where AI agents do not just assist human workers — they operate autonomously across business processes, making contextual decisions, triggering workflows, and handling exceptions without constant human intervention.</p>
+  <p>For finance and operations leaders, this represents a fundamental shift in how ERP systems are used. Understanding what is real today versus what is near-future roadmap is essential for planning.</p>
+  <h3>What "agentic AI" actually means</h3>
+  <p>Agentic AI refers to AI systems capable of taking sequences of actions to complete a goal — not just answering a question, but actually doing something in a system. In the context of Dynamics 365, this means an agent that can:</p>
+  <ul>
+    <li>Retrieve data from your ERP in response to a business trigger</li>
+    <li>Reason over that data to make a decision or recommendation</li>
+    <li>Execute an action — updating a record, submitting a document, sending a notification</li>
+    <li>Escalate to a human when exceptions fall outside defined parameters</li>
+  </ul>
+  <p>This is qualitatively different from Copilot, which assists humans in completing tasks. Agents can complete tasks independently, within governance rules you define.</p>
+  <h3>Live examples in Dynamics 365 Finance today</h3>
+  <p>The <strong>Account Reconciliation Agent</strong> in Dynamics 365 Finance monitors transactions continuously and surfaces exceptions — with a suggested resolution. Finance teams move from chasing exceptions to reviewing and approving them.</p>
+  <p>The <strong>Finance solution in Microsoft 365 Copilot</strong> reached general availability in October 2025. It connects your Dynamics 365 Finance data to the tools your finance team already uses — Excel and Outlook — enabling natural-language queries like "Identify the key drivers for forecast variances for March" directly within Microsoft 365, without switching applications.</p>
+  <div class="callout"><p>&#128161; <strong>Real-world scenario:</strong> A procurement agent monitors supplier performance data in D365 Supply Chain, selects the appropriate supplier for an incoming requisition based on price and lead time history, populates the requisition record, and submits it for approval — all without human intervention until the approval stage. This is live today via the dynamic MCP server.</p></div>
+  <h3>The governance question</h3>
+  <p>The most common concern we hear from finance directors is not about capability — it is about control. If an AI agent is submitting documents and updating records, how do you maintain audit trails and governance?</p>
+  <p>Microsoft's architecture addresses this through the MCP framework itself. Every agent action is governed by the same role-based access controls as a human user. Agents cannot access data or perform actions that exceed the permissions assigned to the service account they operate under. All agent activities are logged in the standard D365 audit trail. And the human-in-the-loop model means that material decisions still involve human judgement.</p>
+  <h3>What finance teams should be doing now</h3>
+  <ul>
+    <li><strong>Audit your current manual processes</strong> — identify the repetitive, rules-based tasks that consume the most time and are most prone to human error</li>
+    <li><strong>Assess your data quality</strong> — agents reason over your ERP data; inconsistent or incomplete master data will limit their effectiveness</li>
+    <li><strong>Define governance parameters</strong> — work with IT and finance leadership to define what decisions agents can make autonomously versus what requires human approval</li>
+    <li><strong>Engage your partner ecosystem</strong> — many of these capabilities are available in preview today and can be piloted without a full production commitment</li>
+  </ul>
+  <p>The agentic ERP is not a future state. It is being built in Dynamics 365 today, wave by wave. The question is not whether it will arrive — it is whether your organisation will be ready to use it.</p>
+</template>
+
+<template id="art-copilot-finance">
+  <span class="article-tag">Copilot</span>
+  <h2 id="modal-title-text">Copilot for Finance is Here — What D365 Finance Teams Need to Know</h2>
+  <div class="article-meta">By Dynamiq Advisors &middot; October 2025 &middot; 5 min read</div>
+  <p>For finance professionals who have been watching Microsoft's AI announcements, October 2025 marked a significant turning point. The <strong>Finance solution in Microsoft 365 Copilot</strong> — formerly known as Microsoft Copilot for Finance — reached general availability, bringing ERP-connected AI assistance directly into the tools finance teams use every day: Excel and Outlook.</p>
+  <h3>What it actually does</h3>
+  <p>The Finance solution connects to your existing Dynamics 365 Finance or SAP environment and surfaces ERP data and workflows within Microsoft 365. Rather than toggling between your ERP and your productivity tools, finance professionals can interact with their data conversationally. A query like "identify the key drivers for forecast variances in Q3" returns a grounded, sourced answer — because Copilot is reading directly from your governed ERP data.</p>
+  <p>Key capabilities now generally available include:</p>
+  <ul>
+    <li><strong>Variance analysis in Excel</strong> — Copilot identifies and explains variances in financial data pulled from D365 Finance, surfacing root causes rather than just numbers</li>
+    <li><strong>Reconciliation assistance</strong> — automated matching suggestions for bank reconciliation and accounts payable, reducing manual effort in period-end close</li>
+    <li><strong>Workflow actions in Outlook</strong> — finance approvals, follow-ups, and escalations can be actioned directly from the inbox, with context pulled from the ERP</li>
+    <li><strong>Natural language reporting</strong> — ask questions in plain English and receive answers grounded in your live financial data</li>
+  </ul>
+  <div class="callout"><p>&#128161; <strong>Pricing note:</strong> As of mid-October 2025, the role-based Finance, Sales, and Service Copilot solutions are included at no extra cost for all Microsoft 365 Copilot subscribers, removing the previous additional charge per user per month.</p></div>
+  <h3>How it connects to Dynamics 365 Finance</h3>
+  <p>The Finance solution is deployed from Microsoft AppSource and connects to your D365 Finance environment through a guided setup process. It runs entirely within your existing Microsoft 365 tenant — no new infrastructure, no separate AI environment to secure. Identity management, permissions, and data governance remain consistent with your existing Microsoft 365 configuration.</p>
+  <p>For IT administrators, this is a meaningful differentiator. Deploying Finance Copilot does not require provisioning a new environment or configuring a parallel AI stack — it is an extension of the Microsoft 365 deployment your team already manages.</p>
+  <h3>What it means for the finance close cycle</h3>
+  <p>The area where early adopters are reporting the clearest benefit is period-end close. The combination of automated variance analysis, reconciliation assistance, and natural-language querying compresses several manual steps that typically consume significant time at month end. Finance teams that previously spent days consolidating reports and investigating variances manually are completing the same work in hours.</p>
+  <p>This is not a replacement for financial judgement — it is a compression of the time spent gathering context before that judgement is applied. The CFO still decides; Copilot reduces the time it takes to have the right information in front of them.</p>
+  <h3>The broader picture</h3>
+  <p>The Finance Copilot GA is one part of a broader shift in how Microsoft is positioning Dynamics 365 for the finance function. Alongside it, Microsoft's 2025 release wave 2 for D365 Finance introduced AI-driven workflow management in Business Performance Planning and generative help within Business Performance Analytics — creating a layered AI experience from transactional processing through to strategic planning.</p>
+  <p>For organisations evaluating their ERP strategy, the question is no longer whether AI will feature in the finance function — it already does. The question is how to structure your Dynamics 365 deployment to take full advantage of these capabilities now and in the waves that follow.</p>
+</template>
+
 </main>
 
 <button id="back-top" aria-label="Back to top" title="Back to top">↑</button>
@@ -613,10 +736,10 @@
 <script>
 'use strict';
 
-/* auto copyright year */
+/* ── COPYRIGHT YEAR ── */
 document.getElementById('copy-year').textContent = new Date().getFullYear();
 
-/* hamburger */
+/* ── HAMBURGER ── */
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => {
@@ -627,10 +750,10 @@ hamburger.addEventListener('click', () => {
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   navLinks.classList.remove('open');
   hamburger.classList.remove('open');
-  hamburger.setAttribute('aria-expanded','false');
+  hamburger.setAttribute('aria-expanded', 'false');
 }));
 
-/* scroll: progress bar + nav shadow + active link + back to top */
+/* ── SCROLL: progress bar + nav shadow + active link + back to top ── */
 const progressBar = document.getElementById('progress-bar');
 const nav         = document.querySelector('nav');
 const backTop     = document.getElementById('back-top');
@@ -648,9 +771,9 @@ window.addEventListener('scroll', () => {
   navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
 }, { passive: true });
 
-backTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-/* fade-in on scroll */
+/* ── FADE-IN ON SCROLL ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -661,22 +784,21 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-/* cookie banner */
+/* ── COOKIE BANNER ── */
 const banner = document.getElementById('cookie-banner');
 if (!localStorage.getItem('cookie-choice')) {
   setTimeout(() => banner.classList.add('show'), 1500);
 }
 document.getElementById('cookie-accept').addEventListener('click', () => {
-  localStorage.setItem('cookie-choice','accepted');
+  localStorage.setItem('cookie-choice', 'accepted');
   banner.classList.remove('show');
-  /* To add Google Analytics: paste your GA4 snippet here, runs only after consent */
 });
 document.getElementById('cookie-decline').addEventListener('click', () => {
-  localStorage.setItem('cookie-choice','declined');
+  localStorage.setItem('cookie-choice', 'declined');
   banner.classList.remove('show');
 });
 
-/* form validation + Formspree submit */
+/* ── FORM VALIDATION + FORMSPREE ── */
 const form      = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 
@@ -686,17 +808,18 @@ function setError(fieldId, errId, show) {
   const e = document.getElementById(errId);
   f.classList.toggle('invalid', show);
   e.classList.toggle('show', show);
-  show ? f.setAttribute('aria-invalid','true') : f.removeAttribute('aria-invalid');
+  show ? f.setAttribute('aria-invalid', 'true') : f.removeAttribute('aria-invalid');
 }
 
-/* live validation on blur */
-document.getElementById('name').addEventListener('blur', function() { setError('name','name-error',!this.value.trim()); });
-document.getElementById('email').addEventListener('blur', function() { setError('email','email-error',!validateEmail(this.value.trim())); });
+document.getElementById('name').addEventListener('blur', function() {
+  setError('name', 'name-error', !this.value.trim());
+});
+document.getElementById('email').addEventListener('blur', function() {
+  setError('email', 'email-error', !validateEmail(this.value.trim()));
+});
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
-  /* honeypot check */
   const hp = form.querySelector('input[name="_gotcha"]');
   if (hp && hp.value) return;
 
@@ -705,249 +828,85 @@ form.addEventListener('submit', async (e) => {
   const msgVal   = document.getElementById('message').value;
 
   let valid = true;
-  if (!nameVal)                { setError('name','name-error',true);   valid=false; } else setError('name','name-error',false);
-  if (!validateEmail(emailVal)){ setError('email','email-error',true); valid=false; } else setError('email','email-error',false);
-  if (msgVal.length > 2000)   { setError('message','msg-error',true); valid=false; } else setError('message','msg-error',false);
+  if (!nameVal)                { setError('name',  'name-error',  true);  valid = false; } else setError('name',  'name-error',  false);
+  if (!validateEmail(emailVal)){ setError('email', 'email-error', true);  valid = false; } else setError('email', 'email-error', false);
+  if (msgVal.length > 2000)   { setError('message','msg-error',  true);  valid = false; } else setError('message','msg-error',  false);
   if (!valid) return;
 
   document.getElementById('email-hidden').value = emailVal;
-  submitBtn.textContent = 'Sending…';
+  submitBtn.textContent = 'Sending...';
   submitBtn.disabled    = true;
 
   try {
-    const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+    const res = await fetch(form.action, {
+      method:  'POST',
+      body:    new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
     if (res.ok) {
-      submitBtn.textContent      = '✓ Message sent — we\'ll be in touch soon';
+      submitBtn.textContent      = 'Message sent - we will be in touch soon';
       submitBtn.style.background = 'var(--green)';
       form.reset();
     } else { throw new Error(); }
   } catch {
-    submitBtn.textContent      = 'Something went wrong — please email us directly';
+    submitBtn.textContent      = 'Something went wrong - please email us directly';
     submitBtn.style.background = 'var(--red)';
     submitBtn.disabled         = false;
   }
 });
 
-/* ── ARTICLE DATA ── */
-  const articles = {
+/* ── ARTICLE MODAL — reads content from <template> elements ── */
+const modal    = document.getElementById('article-modal');
+const modalBody= document.getElementById('modal-content');
+const closeBtn = document.getElementById('modal-close-btn');
 
-    'mcp-dynamic': {
-      tag: 'MCP &amp; AI Agents',
-      title: 'From Static to Dynamic — The Evolution of the Dynamics 365 MCP Server',
-      meta: 'By Dynamiq Advisors · November 2025 · 6 min read',
-      body: `
-        <p>When Microsoft introduced the first Dynamics 365 ERP Model Context Protocol (MCP) server at Build 2025, it was a landmark moment — a standardised, governed bridge between AI agents and enterprise ERP data. But it came with a significant constraint: it was <strong>static</strong>. A fixed catalogue of 13 tools, no room for customisations or ISV extensions, and any change required a code deployment.</p>
-        <p>By November 2025, Microsoft had answered those limitations decisively. The new <strong>dynamic ERP MCP server</strong>, now available in public preview, replaces the fixed catalogue with a flexible framework that can expose hundreds of thousands of ERP functions — including your own customisations — without a single line of custom integration code.</p>
+const articleMap = {
+  'mcp-dynamic':    'art-mcp-dynamic',
+  'mcp-what-is':    'art-mcp-what-is',
+  'agentic-erp':    'art-agentic-erp',
+  'copilot-finance':'art-copilot-finance'
+};
 
-        <h2>What changed and why it matters</h2>
-        <p>The original static server was a proof of concept. It demonstrated that AI agents could interact with Dynamics 365 Finance and Supply Chain Management in a governed, standardised way. What it could not do was scale to the full complexity of a real enterprise ERP environment, where organisations have years of customisations, ISV solutions, and industry-specific configurations layered on top of the standard product.</p>
-        <p>The dynamic server solves this by allowing agents to navigate ERP forms, populate fields, and execute available workflow actions — just as a human user would — but through a server API. The result is that virtually any function available through the Dynamics 365 user interface is now accessible to an AI agent.</p>
+function openArticle(id) {
+  const templateId = articleMap[id];
+  if (!templateId) return;
+  const tpl = document.getElementById(templateId);
+  if (!tpl) return;
 
-        <div class="callout"><p>💡 <strong>What this means for your business:</strong> If you have a customised D365 Finance environment, your customisations are now agent-accessible without any additional development work. AI agents can operate within your business rules and data structures, not around them.</p></div>
+  // Clone template content into modal
+  modalBody.innerHTML = '';
+  modalBody.appendChild(tpl.content.cloneNode(true));
 
-        <h2>The analytics MCP server — coming December 2025</h2>
-        <p>Alongside the dynamic ERP server, Microsoft announced a companion <strong>analytics MCP server</strong> entering public preview in December 2025. This extends the same model-context approach to ERP reporting and analytics data held in Business Performance Analytics (BPA). Agents and BI tools gain governed access to measures, dimensions, and semantic models — meaning metrics like margin, revenue, and cash flow are defined once and shared across AI agents, dashboards, and reports consistently.</p>
-        <p>The practical implication is significant: natural-language forecasting and variance analysis directly within Microsoft Teams or Copilot, grounded in live ERP data rather than stale exports.</p>
+  // Append CTA
+  const cta = document.createElement('div');
+  cta.style.cssText = 'border-top:1px solid var(--border);margin-top:2rem;padding-top:2rem;';
+  cta.innerHTML = '<p style="color:rgba(255,255,255,.6);margin-bottom:1rem;">Want to discuss how these developments could affect your Dynamics 365 strategy?</p>'
+                + '<a href="#contact" class="article-cta" id="modal-cta-link">Talk to an advisor</a>';
+  modalBody.appendChild(cta);
+  document.getElementById('modal-cta-link').addEventListener('click', closeModal);
 
-        <h2>Microsoft's strategic commitment</h2>
-        <p>This is not a peripheral feature. Microsoft has stated that all new Dynamics 365 ERP agents will be built on MCP, and all existing agents will migrate to the framework by December 2025. The Dataverse MCP server reached general availability at Ignite 2025, and MCP servers for Dynamics 365 Sales and Customer Service are also live — creating a coherent, cross-functional agentic platform across the entire Dynamics 365 estate.</p>
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  closeBtn.focus();
+}
 
-        <h2>What should you be doing now?</h2>
-        <p>For organisations currently using or considering Dynamics 365 Finance or Supply Chain Management, the key steps are:</p>
-        <ul>
-          <li>Understand which business processes are candidates for AI agent automation — think repetitive, rules-based tasks such as supplier selection, purchase order approval, and exception handling</li>
-          <li>Evaluate whether your current D365 environment is on a supported version and cloud deployment to take advantage of MCP preview features</li>
-          <li>Begin scoping a pilot use case — a single, well-defined process — to validate the technology in your environment before broader rollout</li>
-          <li>Review your governance and change management approach for AI-initiated actions within your ERP</li>
-        </ul>
-        <p>The dynamic MCP server is in public preview today. Organisations that begin exploring it now will be significantly ahead when these capabilities reach general availability.</p>
-      `
-    },
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-    'copilot-bc': {
-      tag: 'Copilot',
-      title: 'Copilot in Business Central — Practical AI for Growing Businesses',
-      meta: 'By Dynamiq Advisors · March 2025 · 5 min read',
-      body: `
-        <p>Microsoft Dynamics 365 Business Central holds a notable distinction: it was the world's first AI-powered ERP assistant across all lines of business. Since then, Copilot capabilities in Business Central have expanded significantly with each Wave release — and unlike many AI features from other vendors, they are <strong>included in your existing Business Central licence at no additional cost</strong>.</p>
-        <p>Here we review the most impactful Copilot features available today and what they mean for SME finance, operations, and sales teams.</p>
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+});
 
-        <h2>Bank reconciliation — hours saved, every month</h2>
-        <p>Bank reconciliation is one of the most time-consuming month-end tasks for finance teams. Copilot in Business Central automates the matching of bank statement lines to ledger entries, learning from historical patterns to improve accuracy over time. For many teams, this reduces what was a multi-hour task to a review-and-approve workflow taking minutes.</p>
-
-        <h2>Chat with Copilot — your ERP in plain English</h2>
-        <p>The conversational Chat with Copilot feature lets users ask questions about their Business Central data in natural language, in over 20 languages. Rather than building reports or navigating complex filter menus, a user can simply ask: <em>"Show me overdue invoices from our top 10 customers"</em> or <em>"What was our gross margin last quarter compared to this quarter?"</em> — and receive an immediate, contextual answer.</p>
-
-        <div class="callout"><p>💡 <strong>Key point:</strong> Copilot in Business Central respects existing user permissions. It can only surface data the user already has access to — so there are no additional security concerns introduced by enabling it.</p></div>
-
-        <h2>Sales line suggestions and order automation</h2>
-        <p>For businesses managing high-volume orders, Copilot's sales line suggestion feature analyses a customer's purchase history, seasonal patterns, and current inventory to recommend order lines automatically. When an item is out of stock, Copilot surfaces alternatives — helping sales teams close orders without manual back-and-forth.</p>
-
-        <h2>The Payables Agent — autonomous invoice matching</h2>
-        <p>Perhaps the most significant development in the 2025 Wave 2 release is the introduction of <strong>autonomous agents</strong> in Business Central, beginning with the Payables Agent. This agent automates the matching of incoming invoices to purchase orders, using AI to handle the exceptions that would otherwise require manual intervention. It operates with a human-in-the-loop model, surfacing decisions for approval rather than acting unilaterally — giving teams oversight without the manual burden.</p>
-
-        <h2>Analysis Assist — goodbye to complex queries</h2>
-        <p>Instead of building pivot tables or writing complex filter logic, Analysis Assist lets users type questions in plain language and receive structured data views instantly. Queries like <em>"Show me vendors by location sorted by purchase amount"</em> are answered directly, making ad-hoc analysis accessible to non-technical users across the business.</p>
-
-        <h2>Getting started</h2>
-        <p>All of these features are available to Business Central Online customers today. Enabling Copilot requires a straightforward configuration step in your Business Central admin centre — there is no additional infrastructure, no separate AI environment to provision, and no extra licence cost. For organisations not yet on Business Central Online, this is a compelling reason to accelerate a cloud migration conversation.</p>
-      `
-    },
-
-    'agentic-erp': {
-      tag: 'Agentic AI',
-      title: 'The Agentic ERP — What Autonomous AI Means for Finance Teams',
-      meta: 'By Dynamiq Advisors · February 2025 · 7 min read',
-      body: `
-        <p>Microsoft's vision for Dynamics 365 has a name: the <strong>Frontier Firm</strong>. It describes an organisation where AI agents don't just assist human workers — they operate autonomously across business processes, making contextual decisions, triggering workflows, and handling exceptions without constant human intervention.</p>
-        <p>For finance and operations leaders, this represents a fundamental shift in how ERP systems are used. Understanding what is real today versus what is near-future roadmap is essential for planning.</p>
-
-        <h2>What "agentic AI" actually means</h2>
-        <p>Agentic AI refers to AI systems capable of taking sequences of actions to complete a goal — not just answering a question, but actually doing something in a system. In the context of Dynamics 365, this means an agent that can:</p>
-        <ul>
-          <li>Retrieve data from your ERP in response to a business trigger</li>
-          <li>Reason over that data to make a decision or recommendation</li>
-          <li>Execute an action — updating a record, submitting a document, sending a notification</li>
-          <li>Escalate to a human when exceptions fall outside defined parameters</li>
-        </ul>
-        <p>This is qualitatively different from Copilot, which assists humans in completing tasks. Agents can complete tasks independently, within governance rules you define.</p>
-
-        <h2>Live examples in Dynamics 365 Finance today</h2>
-        <p>The <strong>Account Reconciliation Agent</strong> in Dynamics 365 Finance, available now, monitors transactions continuously and surfaces exceptions — ledger not in subledger, subledger not in ledger — with a suggested resolution. Finance teams move from chasing exceptions to reviewing and approving them. The 2025 Wave 2 release has extended this agent's scope significantly.</p>
-        <p>The <strong>Finance solution in Microsoft 365 Copilot</strong> reached general availability in October 2025. It connects your Dynamics 365 Finance data to the tools your finance team already uses — Excel and Outlook — enabling natural-language queries like <em>"Identify the key drivers for forecast variances for March"</em> directly within Microsoft 365, without switching applications.</p>
-
-        <div class="callout"><p>💡 <strong>Real-world scenario:</strong> A procurement agent monitors supplier performance data in D365 Supply Chain, selects the appropriate supplier for an incoming requisition based on price and lead time history, populates the requisition record, and submits it for approval — all without human intervention until the approval stage. This is live today via the dynamic MCP server.</p></div>
-
-        <h2>The governance question</h2>
-        <p>The most common concern we hear from finance directors is not about capability — it is about control. <em>"If an AI agent is submitting documents and updating records, how do we maintain audit trails and governance?"</em></p>
-        <p>Microsoft's architecture addresses this through the MCP framework itself. Every agent action is governed by the same role-based access controls as a human user. Agents cannot access data or perform actions that exceed the permissions assigned to the service account they operate under. All agent activities are logged in the standard D365 audit trail. And the human-in-the-loop model — where agents escalate exceptions for human review — means that material decisions still involve human judgement.</p>
-
-        <h2>What finance teams should be doing now</h2>
-        <p>The organisations that will benefit most from agentic AI in ERP are those that start preparing now, before general availability of the most powerful features. Practically, this means:</p>
-        <ul>
-          <li><strong>Audit your current manual processes</strong> — identify the repetitive, rules-based tasks that consume the most time and are most prone to human error</li>
-          <li><strong>Assess your data quality</strong> — agents reason over your ERP data; inconsistent or incomplete master data will limit their effectiveness</li>
-          <li><strong>Define governance parameters</strong> — work with your IT and finance leadership to define what decisions agents can make autonomously versus what requires human approval</li>
-          <li><strong>Engage your partner ecosystem</strong> — many of these capabilities are available in preview today and can be piloted without a full production commitment</li>
-        </ul>
-        <p>The agentic ERP is not a future state. It is being built in Dynamics 365 today, wave by wave. The question is not whether it will arrive — it is whether your organisation will be ready to use it.</p>
-      `
-    },
-
-    'mcp-what-is': {
-      tag: 'Explainer',
-      title: 'What is MCP and Why Should Dynamics 365 Customers Care?',
-      meta: 'By Dynamiq Advisors · October 2025 · 5 min read',
-      body: `
-        <p>You may have started hearing the term "MCP" in conversations about AI and Microsoft Dynamics 365 over the past few months. It's being called the <strong>"USB-C for AI"</strong> — a universal connector that allows AI agents to plug into any compatible system. But what does it actually mean for organisations running Dynamics 365, and why should it be on your radar?</p>
-
-        <h2>What MCP stands for</h2>
-        <p><strong>Model Context Protocol</strong> is an open standard that defines how AI agents communicate with external tools, data sources, and applications. It was originally introduced by Anthropic — the AI company behind the Claude model — and has since been adopted as a cross-industry standard by Microsoft, among many others.</p>
-        <p>Before MCP, connecting an AI agent to a business system like an ERP required custom integration work for every new system — unique APIs, bespoke connectors, ongoing maintenance. MCP replaces that with a single, standardised interface. If a system has an MCP server, any MCP-compatible AI agent can connect to it out of the box.</p>
-
-        <div class="callout"><p>💡 <strong>The USB-C analogy:</strong> Just as USB-C replaced dozens of proprietary charging cables with one universal standard, MCP replaces dozens of proprietary AI integrations with one universal protocol. One connector, any device.</p></div>
-
-        <h2>How Microsoft has implemented MCP for Dynamics 365</h2>
-        <p>Microsoft has built MCP servers across its Dynamics 365 and Power Platform portfolio. As of late 2025, the following are live or in public preview:</p>
-        <ul>
-          <li><strong>Dynamics 365 ERP MCP Server</strong> (Finance &amp; Supply Chain Management) — dynamic framework exposing hundreds of thousands of ERP functions, in public preview</li>
-          <li><strong>Dynamics 365 Sales MCP Server</strong> — allows AI agents to retrieve, update, and act on CRM data, qualify leads, and generate quotes</li>
-          <li><strong>Dynamics 365 Customer Service MCP Server</strong> — connects agents to case management and service workflows</li>
-          <li><strong>Dataverse MCP Server</strong> — generally available; natural language interface to all data stored in Dataverse across the Power Platform</li>
-          <li><strong>Power Apps MCP Server</strong> — allows agents to trigger approvals, form submissions, and data retrieval within Power Apps</li>
-          <li><strong>Analytics MCP Server</strong> — entering public preview December 2025; governed access to Business Performance Analytics data</li>
-        </ul>
-
-        <h2>What it means for AI assistant tools like Claude and ChatGPT</h2>
-        <p>One of the most significant practical implications of MCP for end users is that <strong>your favourite AI assistant can now directly connect to Dynamics 365</strong>. Microsoft has confirmed that Dynamics 365 Sales MCP server is compatible with Claude and, in the future, ChatGPT. A seller could, in principle, ask Claude to pull their top 10 open opportunities, draft a follow-up email for each, and log the activity in D365 — without leaving their AI assistant.</p>
-        <p>For developers and IT teams, MCP dramatically reduces integration effort. Building an agent that spans Dynamics 365 Sales, Business Central, and Customer Service no longer requires three separate custom integrations — it requires three MCP server connections, all following the same pattern.</p>
-
-        <h2>What Dynamics 365 customers should know</h2>
-        <p>MCP is not just a technical detail — it is the architectural foundation of how Microsoft is building AI into Dynamics 365 going forward. Microsoft has committed that all new Dynamics 365 ERP agents will be built on MCP, and existing agents will migrate to the framework by the end of 2025.</p>
-        <p>For customers, this means:</p>
-        <ul>
-          <li>Simpler, faster agent development — whether you're building custom agents in Copilot Studio or using Microsoft's own first-party agents</li>
-          <li>Cross-application automation without custom code — a quote in Business Central triggered by a qualified lead in D365 Sales, processed through a customer service workflow, all via MCP</li>
-          <li>Future-proof integrations — as the MCP ecosystem grows, new AI tools will be able to connect to your Dynamics 365 environment without additional integration work</li>
-          <li>Consistent governance — every agent action goes through the same access controls and audit trails as a human user</li>
-        </ul>
-        <p>Understanding MCP now puts you in a strong position to evaluate the AI agent roadmap for your Dynamics 365 environment — and to ask the right questions of your implementation partner about how they are preparing for this shift.</p>
-      `
-    },
-
-    'copilot-finance': {
-      tag: 'Copilot',
-      title: 'Copilot for Finance is Here — What D365 Finance Teams Need to Know',
-      meta: 'By Dynamiq Advisors · October 2025 · 5 min read',
-      body: `
-        <p>For finance professionals who have been watching Microsoft's AI announcements with a mixture of curiosity and scepticism, October 2025 marked a significant turning point. The <strong>Finance solution in Microsoft 365 Copilot</strong> — formerly known as Microsoft Copilot for Finance — reached general availability, bringing ERP-connected AI assistance directly into the tools finance teams use every day: Excel and Outlook.</p>
-
-        <h2>What it actually does</h2>
-        <p>The Finance solution connects to your existing Dynamics 365 Finance or SAP environment and surfaces ERP data and workflows within Microsoft 365. Rather than toggling between your ERP and your productivity tools, finance professionals can interact with their data conversationally. A query like <em>"identify the key drivers for forecast variances in Q3"</em> returns a grounded, sourced answer — not a hallucinated summary — because Copilot is reading directly from your governed ERP data.</p>
-        <p>Key capabilities now generally available include:</p>
-        <ul>
-          <li><strong>Variance analysis in Excel</strong> — Copilot identifies and explains variances in financial data pulled from D365 Finance, surfacing the root causes rather than just the numbers</li>
-          <li><strong>Reconciliation assistance</strong> — automated matching suggestions for bank reconciliation and accounts payable, reducing the manual effort in period-end close</li>
-          <li><strong>Workflow actions in Outlook</strong> — finance approvals, follow-ups, and escalations can be actioned directly from the inbox, with context pulled from the ERP</li>
-          <li><strong>Natural language reporting</strong> — ask questions in plain English and receive answers grounded in your live financial data</li>
-        </ul>
-
-        <div class="callout"><p>💡 <strong>Pricing note:</strong> As of mid-October 2025, the role-based Finance, Sales, and Service Copilot solutions are included at no extra cost for all Microsoft 365 Copilot subscribers, removing the previous additional £20/user/month charge.</p></div>
-
-        <h2>How it connects to Dynamics 365 Finance</h2>
-        <p>The Finance solution is deployed from Microsoft AppSource and connects to your D365 Finance environment through a guided setup process. It runs entirely within your existing Microsoft 365 tenant — no new infrastructure, no separate AI environment to secure. Identity management, permissions, and data governance remain consistent with your existing Microsoft 365 configuration, which is particularly important for organisations with strict data residency or compliance requirements.</p>
-        <p>For IT administrators, this is a meaningful differentiator. Deploying Finance Copilot does not require provisioning a new environment or configuring a parallel AI stack — it is an extension of the Microsoft 365 deployment your team already manages.</p>
-
-        <h2>What it means for the finance close cycle</h2>
-        <p>The area where early adopters are reporting the clearest benefit is period-end close. The combination of automated variance analysis, reconciliation assistance, and natural-language querying compresses several manual steps that typically consume significant time at month end. Finance teams that previously spent days consolidating reports and investigating variances manually are completing the same work in hours.</p>
-        <p>This is not a replacement for financial judgement — it is a compression of the time spent gathering context before that judgement is applied. The CFO still decides; Copilot reduces the time it takes to have the right information in front of them.</p>
-
-        <h2>The broader picture: AI in the finance function</h2>
-        <p>The Finance Copilot GA is one part of a broader shift in how Microsoft is positioning Dynamics 365 for the finance function. Alongside it, Microsoft's 2025 release wave 2 for D365 Finance introduced AI-driven workflow management in Business Performance Planning and generative help within Business Performance Analytics — creating a layered AI experience from transactional processing through to strategic planning.</p>
-        <p>For organisations evaluating their ERP strategy, the question is no longer whether AI will feature in the finance function — it already does. The question is how to structure your Dynamics 365 deployment to take full advantage of these capabilities now and in the waves that follow.</p>
-      `
-    }
-
-  };
-
-  /* ── MODAL LOGIC ── */
-  const modal      = document.getElementById('article-modal');
-  const modalBody  = document.getElementById('modal-content');
-  const closeBtn   = document.getElementById('modal-close-btn');
-
-  function openArticle(id) {
-    const a = articles[id];
-    if (!a) return;
-    modalBody.innerHTML = `
-      <span class="article-tag">${a.tag}</span>
-      <h2 id="modal-title-text">${a.title}</h2>
-      <div class="article-meta">${a.meta}</div>
-      ${a.body}
-      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:2rem;">
-        <p style="color:rgba(255,255,255,.6);margin-bottom:1rem;">Want to discuss how these developments could affect your Dynamics 365 strategy?</p>
-        <a href="#contact" class="article-cta" onclick="closeModal()">Talk to an advisor →</a>
-      </div>
-    `;
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    closeBtn.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
-
-  // keyboard support for blog cards
-  document.querySelectorAll('.blog-card').forEach(card => {
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
-    });
+// Keyboard support for blog cards
+document.querySelectorAll('.blog-card').forEach(card => {
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
   });
-
+});
+</script>
 </body>
 </html>
